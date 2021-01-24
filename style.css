@@ -1,6 +1,7 @@
 body {
     font-size: 15pt;
     margin: 3px;
+    background-color: #322F8D;
 }
 canvas{
   border: 1px solid black;

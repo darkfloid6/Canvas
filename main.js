@@ -29,17 +29,40 @@ c.arc(x, y, 50, 30, 50, false);
 c.strokeStyle = "rgb("+red+","+green+"," +blue+" )";
 c.stroke();
 };*/
+function Circle(x, y) {
+  // body...
+  this.x = x;
+  this.y = y;
+  
+  this.draw = function() {
+    console.log('Stephen');
+  }
+}
 
-var x = 100;
+var circle = new Circle(100, 100);
+circle.draw();
+
+var x = Math.random() * innerWidth;
+var y = Math.random() * innerHeight;
+var dx = (Math.random() - 0.5) * 8;
+var dy = (Math.random() - 0.5) * 8;
+var radius = 30;
 
 function animate() {
   // body...
   requestAnimationFrame(animate);
 c.clearRect(0, 0, innerWidth, innerHeight);
 c.beginPath();
-c.arc(x, 100, 50, Math.PI * 2, false);
+c.arc(x, y, radius, Math.PI * 2, false);
+c.strokeStyle = 'yellow';
 c.stroke();
-
-x += 1;
+if (x + radius > innerWidth || x - radius < 0){
+  dx = -dx;
+}
+if (y + radius > innerHeight || y - radius < 0) {
+  dy = -dy;
+}
+x += dx;
+y += dy;
 };
 animate();
