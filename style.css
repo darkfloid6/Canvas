@@ -1,8 +1,8 @@
 body {
     font-size: 15pt;
-    margin: 0;
+    margin: 3px;
 }
 canvas{
   border: 1px solid black;
-  margin: 1px;
+  margin: 2px;
 }
