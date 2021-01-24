@@ -1,0 +1,7 @@
+body {
+    font-size: 15pt;
+}
+canvas{
+  border: 1px solid black;
+  margin: 1px;
+}
